@@ -12,7 +12,7 @@ resource "cloudflare_record" "icplite01" {
 resource "cloudflare_record" "icpdev06" {
   domain = "swallowlab.work"
   name   = "icpdev06"
-  value  = "169.62.94.104"
+  value  = "${ibm_compute_vm_instance.icpdev06.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
@@ -21,7 +21,7 @@ resource "cloudflare_record" "icpdev06" {
 resource "cloudflare_record" "icpdev07" {
   domain = "swallowlab.work"
   name   = "icpdev07"
-  value  = "169.62.94.108"
+  value  = "${ibm_compute_vm_instance.icpdev07.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
@@ -30,7 +30,7 @@ resource "cloudflare_record" "icpdev07" {
 resource "cloudflare_record" "icpdev08" {
   domain = "swallowlab.work"
   name   = "icpdev08"
-  value  = "169.62.93.232"
+  value  = "${ibm_compute_vm_instance.icpdev08.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
@@ -39,7 +39,7 @@ resource "cloudflare_record" "icpdev08" {
 resource "cloudflare_record" "icpedge31" {
   domain = "swallowlab.work"
   name   = "icpedge31"
-  value  = "169.62.94.120"
+  value  = "${ibm_compute_vm_instance.icpedge31.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
@@ -48,7 +48,7 @@ resource "cloudflare_record" "icpedge31" {
 resource "cloudflare_record" "icphub61" {
   domain = "swallowlab.work"
   name   = "icphub61"
-  value  = "169.62.94.99"
+  value  = "${ibm_compute_vm_instance.icphub61.ipv4_address}"
   type   = "A"
   ttl    = 1
   proxied = true 
@@ -57,7 +57,7 @@ resource "cloudflare_record" "icphub61" {
 resource "cloudflare_record" "master01" {
   domain = "swallowlab.work"
   name   = "master01"
-  value  = "169.62.94.118"
+  value  = "${ibm_compute_vm_instance.master01.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
