@@ -9,8 +9,8 @@ resource "ibm_compute_vm_instance" "icpdev06" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
 
@@ -25,8 +25,8 @@ resource "ibm_compute_vm_instance" "icpdev07" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
 
@@ -41,8 +41,8 @@ resource "ibm_compute_vm_instance" "icpdev08" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
 
@@ -57,8 +57,8 @@ resource "ibm_compute_vm_instance" "icpedge31" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
 
@@ -73,8 +73,8 @@ resource "ibm_compute_vm_instance" "master01" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
 
@@ -90,8 +90,8 @@ resource "ibm_compute_vm_instance" "icphub61" {
     private_network_only = false
     local_disk = false
     disks = [100]
-    private_security_group_ids = [1287613, 1345731]
-    public_security_group_ids = [1287613, 1345731, 1287983]
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927, 1287983]
     ssh_key_ids = [1424657]
 }
 
@@ -107,7 +107,7 @@ resource "ibm_compute_vm_instance" "icphub91" {
     private_network_only = false
     local_disk = false
     disks = [100]
-    private_security_group_ids = [1287613, 1236927]
+    private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927, 1287983]
     ssh_key_ids = [1424657]
 }
@@ -123,7 +123,7 @@ resource "ibm_compute_vm_instance" "icosdemo1" {
     hourly_billing = true
     private_network_only = false
     local_disk = false
-    private_security_group_ids = [1287613, 1236927]
+    private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
 }
