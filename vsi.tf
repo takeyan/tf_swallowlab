@@ -1,6 +1,6 @@
-resource "ibm_compute_vm_instance" "icpdev10" {
+resource "ibm_compute_vm_instance" "icpdev11" {
     transient = true
-    hostname = "icpdev10"
+    hostname = "icpdev11"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_1X2X25"

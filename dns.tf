@@ -8,15 +8,15 @@ resource "cloudflare_record" "icplite01" {
   proxied = false
 }
 */
-resource "cloudflare_record" "icpdev10" {
+  
+resource "cloudflare_record" "icpdev11" {
   domain = "swallowlab.work"
-  name   = "icpdev10"
-  value  = "${ibm_compute_vm_instance.icpdev10.ipv4_address}"
+  name   = "icpdev11"
+  value  = "${ibm_compute_vm_instance.icpdev11.ipv4_address}"
   type   = "A"
   ttl    = 900
   proxied = false
 }
-
 
 resource "cloudflare_record" "icpedge31" {
   domain = "swallowlab.work"
