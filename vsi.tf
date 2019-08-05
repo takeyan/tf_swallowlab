@@ -1,6 +1,6 @@
-resource "ibm_compute_vm_instance" "icpdev06" {
+resource "ibm_compute_vm_instance" "icpdev10" {
     transient = true
-    hostname = "icpdev06"
+    hostname = "icpdev10"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_1X2X25"
@@ -14,37 +14,6 @@ resource "ibm_compute_vm_instance" "icpdev06" {
     ssh_key_ids = [1424657]
 }
 
-resource "ibm_compute_vm_instance" "icpdev07" {
-    transient = true
-    hostname = "icpdev07"
-    domain = "swallowlab.work"
-    os_reference_code = "UBUNTU_18_64"
-    flavor_key_name = "B1_1X2X25"
-    datacenter = "sjc04"
-    network_speed = 100
-    hourly_billing = true
-    private_network_only = false
-    local_disk = false
-    private_security_group_ids = []
-    public_security_group_ids = [1287613, 1236927]
-    ssh_key_ids = [1424657]
-}
-
-resource "ibm_compute_vm_instance" "icpdev08" {
-    transient = true
-    hostname = "icpdev08"
-    domain = "swallowlab.work"
-    os_reference_code = "UBUNTU_18_64"
-    flavor_key_name = "B1_1X2X25"
-    datacenter = "sjc04"
-    network_speed = 100
-    hourly_billing = true
-    private_network_only = false
-    local_disk = false
-    private_security_group_ids = []
-    public_security_group_ids = [1287613, 1236927]
-    ssh_key_ids = [1424657]
-}
 
 resource "ibm_compute_vm_instance" "icpedge31" {
     transient = true
@@ -78,9 +47,10 @@ resource "ibm_compute_vm_instance" "master01" {
     ssh_key_ids = [1424657]
 }
 
-resource "ibm_compute_vm_instance" "icphub61" {
+
+resource "ibm_compute_vm_instance" "icphub101" {
     transient = true
-    hostname = "icphub61"
+    hostname = "icphub101"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_16X32X100"
@@ -95,9 +65,9 @@ resource "ibm_compute_vm_instance" "icphub61" {
     ssh_key_ids = [1424657]
 }
 
-resource "ibm_compute_vm_instance" "icphub91" {
+resource "ibm_compute_vm_instance" "icphub102" {
     transient = true
-    hostname = "icphub91"
+    hostname = "icphub102"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_16X32X100"
