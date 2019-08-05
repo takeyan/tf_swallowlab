@@ -18,6 +18,24 @@ resource "cloudflare_record" "icpdev11" {
   proxied = false
 }
 
+resource "cloudflare_record" "edge11" {
+  domain = "swallowlab.work"
+  name   = "edge11"
+  value  = "${ibm_compute_vm_instance.edge11.ipv4_address}"
+  type   = "A"
+  ttl    = 900
+  proxied = false
+}
+
+resource "cloudflare_record" "edge12" {
+  domain = "swallowlab.work"
+  name   = "edge12"
+  value  = "${ibm_compute_vm_instance.edge12.ipv4_address}"
+  type   = "A"
+  ttl    = 900
+  proxied = false
+}
+
 resource "cloudflare_record" "icpedge31" {
   domain = "swallowlab.work"
   name   = "icpedge31"
