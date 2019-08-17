@@ -14,6 +14,21 @@ resource "ibm_compute_vm_instance" "icpdev11" {
     ssh_key_ids = [1424657]
 }
 
+resource "ibm_compute_vm_instance" "icpdev12" {
+    transient = true
+    hostname = "icpdev12"
+    domain = "swallowlab.work"
+    os_reference_code = "UBUNTU_18_64"
+    flavor_key_name = "B1_1X2X25"
+    datacenter = "sjc04"
+    network_speed = 100
+    hourly_billing = true
+    private_network_only = false
+    local_disk = false
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
+    ssh_key_ids = [1424657]
+}
 
 resource "ibm_compute_vm_instance" "edge11" {
     transient = true
@@ -81,9 +96,9 @@ resource "ibm_compute_vm_instance" "master01" {
 }
 
 
-resource "ibm_compute_vm_instance" "icphub101" {
+resource "ibm_compute_vm_instance" "icphub111" {
     transient = true
-    hostname = "icphub101"
+    hostname = "icphub111"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_16X32X100"

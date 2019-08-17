@@ -18,6 +18,15 @@ resource "cloudflare_record" "icpdev11" {
   proxied = false
 }
 
+resource "cloudflare_record" "icpdev12" {
+  domain = "swallowlab.work"
+  name   = "icpdev12"
+  value  = "${ibm_compute_vm_instance.icpdev12.ipv4_address}"
+  type   = "A"
+  ttl    = 900
+  proxied = false
+}
+
 resource "cloudflare_record" "edge11" {
   domain = "swallowlab.work"
   name   = "edge11"
@@ -72,14 +81,15 @@ resource "cloudflare_record" "icosdemo1" {
   proxied = false
 }
 
-resource "cloudflare_record" "icphub101" {
+resource "cloudflare_record" "icphub111" {
   domain = "${var.cloudflare_domain}"
-  name   = "icphub101"
-  value  = "${ibm_compute_vm_instance.icphub101.ipv4_address}"
+  name   = "icphub111"
+  value  = "${ibm_compute_vm_instance.icphub111.ipv4_address}"
   type   = "A"
   ttl    = 1
   proxied = true 
 }
+
 
 resource "cloudflare_record" "icphub102" {
   domain = "${var.cloudflare_domain}"
