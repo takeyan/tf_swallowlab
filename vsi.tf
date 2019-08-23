@@ -12,6 +12,7 @@ resource "ibm_compute_vm_instance" "icpdev11" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 resource "ibm_compute_vm_instance" "icpdev12" {
@@ -28,7 +29,26 @@ resource "ibm_compute_vm_instance" "icpdev12" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
+
+resource "ibm_compute_vm_instance" "icpdev21" {
+    transient = true
+    hostname = "icpdev21"
+    domain = "swallowlab.work"
+    os_reference_code = "UBUNTU_18_64"
+    flavor_key_name = "B1_1X2X25"
+    datacenter = "sjc04"
+    network_speed = 100
+    hourly_billing = true
+    private_network_only = false
+    local_disk = false
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
+    ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
+}
+
 
 resource "ibm_compute_vm_instance" "edge11" {
     transient = true
@@ -44,6 +64,7 @@ resource "ibm_compute_vm_instance" "edge11" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 resource "ibm_compute_vm_instance" "edge12" {
@@ -60,6 +81,7 @@ resource "ibm_compute_vm_instance" "edge12" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 
@@ -77,6 +99,7 @@ resource "ibm_compute_vm_instance" "icpedge31" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 resource "ibm_compute_vm_instance" "master01" {
@@ -93,12 +116,13 @@ resource "ibm_compute_vm_instance" "master01" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 
-resource "ibm_compute_vm_instance" "icphub111" {
+resource "ibm_compute_vm_instance" "icphub120" {
     transient = true
-    hostname = "icphub111"
+    hostname = "icphub120"
     domain = "swallowlab.work"
     os_reference_code = "UBUNTU_18_64"
     flavor_key_name = "B1_16X32X100"
@@ -111,6 +135,7 @@ resource "ibm_compute_vm_instance" "icphub111" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927, 1287983]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 resource "ibm_compute_vm_instance" "icphub102" {
@@ -128,6 +153,7 @@ resource "ibm_compute_vm_instance" "icphub102" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927, 1287983]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 resource "ibm_compute_vm_instance" "icosdemo1" {
@@ -144,6 +170,24 @@ resource "ibm_compute_vm_instance" "icosdemo1" {
     private_security_group_ids = []
     public_security_group_ids = [1287613, 1236927]
     ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
+}
+
+resource "ibm_compute_vm_instance" "okd01" {
+    transient = true
+    hostname = "okd01"
+    domain = "swallowlab.work"
+    os_reference_code = "CENTOS_7_64"
+    flavor_key_name = "B1_4X16X100"
+    datacenter = "sjc04"
+    network_speed = 100
+    hourly_billing = true
+    private_network_only = false
+    local_disk = false
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
+    ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
 }
 
 /*
