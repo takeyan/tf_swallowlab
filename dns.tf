@@ -17,7 +17,7 @@ resource "cloudflare_record" "icpdev22" {
   ttl    = 900
   proxied = false
 }
-
+/*
 resource "cloudflare_record" "edge11" {
   domain = "swallowlab.work"
   name   = "edge11"
@@ -35,7 +35,7 @@ resource "cloudflare_record" "edge12" {
   ttl    = 900
   proxied = false
 }
-
+*/
 resource "cloudflare_record" "icpedge31" {
   domain = "swallowlab.work"
   name   = "icpedge31"
@@ -62,7 +62,7 @@ resource "cloudflare_record" "master02" {
   ttl    = 900
   proxied = false
 }
-
+  
 resource "cloudflare_record" "desktop4" {
   domain = "swallowlab.work"
   name   = "desktop4"
@@ -80,6 +80,15 @@ resource "cloudflare_record" "desktop5" {
   ttl    = 900
   proxied = false
 }
+/*
+resource "cloudflare_record" "desktop6" {
+  domain = "swallowlab.work"
+  name   = "desktop6"
+  value  = "${ibm_compute_vm_instance.desktop6.ipv4_address}"
+  type   = "A"
+  ttl    = 900
+  proxied = false
+}*/
 
 resource "cloudflare_record" "oregon" {
   domain = "swallowlab.work"
@@ -108,7 +117,7 @@ resource "cloudflare_record" "icosdemo1" {
   ttl    = 900
   proxied = false
 }
-  
+/*  
 resource "cloudflare_record" "icphub120" {
   domain = "${var.cloudflare_domain}"
   name   = "icphub120"
@@ -127,3 +136,12 @@ resource "cloudflare_record" "edgehub130" {
   proxied = false
 }
 
+resource "cloudflare_record" "ocp42crc" {
+  domain = "${var.cloudflare_domain}"
+  name   = "ocp42crc"
+  value  = "${ibm_compute_vm_instance.ocp42crc.ipv4_address}"
+  type   = "A"
+  ttl    = 900
+  proxied = false
+}
+*/

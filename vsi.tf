@@ -15,7 +15,7 @@ resource "ibm_compute_vm_instance" "icpdev22" {
     notes = "${var.softlayer_username}"
 }
 
-
+/*
 resource "ibm_compute_vm_instance" "edge11" {
     transient = true
     hostname = "edge11"
@@ -49,7 +49,7 @@ resource "ibm_compute_vm_instance" "edge12" {
     ssh_key_ids = [1424657]
     notes = "${var.softlayer_username}"
 }
-
+*/
 
 resource "ibm_compute_vm_instance" "icpedge31" {
     transient = true
@@ -102,7 +102,7 @@ resource "ibm_compute_vm_instance" "master02" {
     notes = "${var.softlayer_username}"
 }
 
-
+/*
 resource "ibm_compute_vm_instance" "icphub120" {
     transient = true
     hostname = "icphub120"
@@ -138,6 +138,7 @@ resource "ibm_compute_vm_instance" "edgehub130" {
     ssh_key_ids = [1424657]
     notes = "${var.softlayer_username}"
 }
+*/
 
 resource "ibm_compute_vm_instance" "icosdemo1" {
     transient = true
@@ -190,7 +191,24 @@ resource "ibm_compute_vm_instance" "desktop5" {
     ssh_key_ids = [1424657]
     notes = "${var.softlayer_username}"
 }
-
+/*
+resource "ibm_compute_vm_instance" "ocp42crc" {
+    transient = true
+    hostname = "ocp42crc"
+    domain = "swallowlab.work"
+    os_reference_code = "CENTOS_7"
+    flavor_key_name = "B1_4X16X100"
+    datacenter = "sjc04"
+    network_speed = 100
+    hourly_billing = true
+    private_network_only = false
+    local_disk = false
+    private_security_group_ids = []
+    public_security_group_ids = [1287613, 1236927]
+    ssh_key_ids = [1424657]
+    notes = "${var.softlayer_username}"
+}
+*/
 
 /*
 ID        Name                      Description                                                                               Created
